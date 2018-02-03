@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title>GeoTag</title>
+  <link rel="stylesheet" href="stylesheet.css">
+  <link rel="stylesheet" href="responsive.css">
+  <script src="https://use.fontawesome.com/eaa2ce881c.js"></script>
+  <script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+  <header>
+  </header>
+  <div id="streetmap">
+
+    <div class="background-circle"></div>
+    <div class="open-instructions">
+      <i class="fa fa-question-circle"></i>
+    </div>
+
+    <div class="instructions-container">
+      <a href="#" class="btn-close close-instructions"></a>
+      <div class="instructions">
+        <p class="instructions-text">Welcome to <span class="lost">Lost</span>, a geo game based on Google.</p>
+        <button type="button" class="btn-next">Next<i class="fa fa-long-arrow-right"></i></button>
+      </div>
+
+    </div>
+
+    <div class="user-stats">
+      <div class="header-btns">
+        <button type="button" class="btn-origin"><i class="fa fa-map-marker"></i> Back to Origin</button>
+      </div>
+    </div>
+
+    <div class="map-container">
+      <div class="map-toolbar">
+        <button type="button" id="toolbar-size" class="btn-sgmap"><i class="fa fa-expand"></i></button>
+      </div>
+      <div id="sgmap"></div>
+      <div class="guess-toolbar">
+        <button type="button" class="btn-guess">Submit Guess</button>
+      </div>
+    </div>
+
+    <div class="results-container">
+      <a href="#" class="btn-close close-results"></a>
+      <div class="results">
+        <p>Congratulations! The marker you placed was <span class="score-text"></span>m from your original position. </p>
+        <p class="penalty-text">This includes a <span class="penalty-m"></span>m penalty for moving your position <span class="penalty-number"></span> time(s).</p>
+        <p class="score-liner"></p>
+        <input type="button" class="btn-try-again" value="Try New Location" onClick="window.location.reload()">
+      </div>
+    </div>
+
+  </div>
+  <footer>
+   <script src="javascript.js"></script>
+    <script async
+    src="https://maps.googleapis.com/maps/api/js?region=SG&key=AIzaSyCBFEvKsxvACAyu_qzY-2szp-VYBC5A9tY&callback=initPano">
+  </script>
+  </footer>
+</body>
