@@ -123,7 +123,7 @@
                 panControl: true,
                 panControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER},
                 fullscreenControl: false,
-                motionTrackingControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER}
+                motionTrackingControlOptions: {position: google.maps.ControlPosition.BOTTOM_LEFT}
 
           });
 
@@ -178,6 +178,10 @@
         });
 
         var marker;
+
+        google.maps.event.addListener(map, 'resize', function(event) {
+          map.setCenter({lat: 1.3521, lng: 103.8198 });
+        })
 
         google.maps.event.addListener(map, 'click', function(event) {
            placeMarker(event.latLng);
