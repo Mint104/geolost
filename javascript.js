@@ -122,7 +122,8 @@
                 zoomControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER},
                 panControl: true,
                 panControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER},
-                fullscreenControl: false
+                fullscreenControl: false,
+                motionTrackingControlOptions: {position: google.maps.ControlPosition.LEFT_CENTER}
 
           });
 
